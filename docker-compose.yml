@@ -32,6 +32,8 @@ services:
     image: "containrrr/watchtower"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      - WATCHTOWER_POLL_INTERVAL=300 # 5 minutes
 
 volumes:
   portainer_data:
